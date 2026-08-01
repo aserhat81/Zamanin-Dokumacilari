@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Zamanın Dokumacıları — Ahmet Serhat Uğurlu tarafından yazılmış ücretsiz bilimkurgu romanı. PDF ve EPUB olarak indir.">
+  <title>Zamanın Dokumacıları — Ücretsiz Bilimkurgu Romanı</title>
+  <style>
+    :root{--bg:#050914;--panel:#0b1324;--text:#f4f2ec;--muted:#aeb8cc;--gold:#e6bd62;--gold2:#fff0b2;--line:#23304a}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 50% 0,#142342 0,#050914 46%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.65}
+    a{color:inherit}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{padding:54px 0 28px;text-align:center}
+    .logo{width:min(520px,90%);max-height:230px;object-fit:contain}
+    .hero{display:grid;grid-template-columns:minmax(250px,380px) 1fr;gap:52px;align-items:center;padding:28px 0 70px}
+    .cover{width:100%;border-radius:14px;box-shadow:0 28px 80px #000b;border:1px solid #ffffff20}
+    h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,78px);line-height:1.03;margin:0 0 18px;color:var(--gold2)}
+    .lead{font-size:clamp(19px,2.2vw,27px);color:#fff;margin:0 0 18px}
+    .summary{color:var(--muted);font-size:17px}
+    .buttons{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 22px}
+    .btn{display:inline-block;text-decoration:none;padding:14px 20px;border-radius:10px;font-weight:800;border:1px solid var(--gold)}
+    .primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#171005}
+    .secondary{background:#ffffff0a;color:var(--gold2)}
+    .stats{display:flex;gap:14px;flex-wrap:wrap}
+    .stat{background:#ffffff08;border:1px solid var(--line);border-radius:12px;padding:13px 17px;min-width:145px}
+    .stat strong{display:block;color:var(--gold2);font-size:24px}
+    section{padding:55px 0;border-top:1px solid var(--line)}
+    h2{font-family:Georgia,serif;color:var(--gold2);font-size:34px;margin:0 0 18px}
+    blockquote{margin:28px 0;padding:20px 24px;border-left:4px solid var(--gold);background:#ffffff08;font-family:Georgia,serif;font-size:22px}
+    footer{padding:34px 0 55px;border-top:1px solid var(--line);color:var(--muted);text-align:center}
+    .error{font-size:13px;color:var(--muted);margin-top:8px}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:30px}.cover{max-width:360px;margin:auto}.heroText{text-align:center}.buttons,.stats{justify-content:center}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="assets/logo.png" alt="Zamanın Dokumacıları">
+    </header>
+
+    <main class="hero">
+      <img class="cover" src="assets/kapak.jpg" alt="Zamanın Dokumacıları kitap kapağı">
+      <div class="heroText">
+        <h1>Zamanın Dokumacıları</h1>
+        <p class="lead">Geçmiş sizi duyabilseydi, ona ne söylerdiniz?</p>
+        <p class="summary">
+          3025 yılında başlayan; kader, özgür irade, yapay zekâ ve zamanın doğası üzerine kurulu
+          felsefi bir bilimkurgu romanı. Ahmet Serhat Uğurlu tarafından ücretsiz yayımlanmıştır.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.pdf">PDF İndir</a>
+          <a class="btn secondary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.epub">EPUB / Apple Books</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong id="total">—</strong>Toplam indirme</div>
+          <div class="stat"><strong id="pdf">—</strong>PDF</div>
+          <div class="stat"><strong id="epub">—</strong>EPUB</div>
+        </div>
+        <div class="error" id="counterStatus">Sayaç GitHub Releases verilerinden alınır.</div>
+      </div>
+    </main>
+
+    <section>
+      <h2>Kitap Hakkında</h2>
+      <p>
+        Bilge, Aybike, Göktuğ, Alp ve zamanın yankılarını hissedebilen Umay;
+        geçmişe dokunmanın geleceği kurtarıp kurtaramayacağını anlamaya çalışır.
+        Fakat zaman, insanın ölçebildiğinden çok daha eski ve daha inatçı bir yapıya sahiptir.
+      </p>
+      <blockquote>Son sayfaya geldiğinizde ilk bölümü yeniden okumak isteyebilirsiniz.</blockquote>
+    </section>
+
+    <section>
+      <h2>Ücretsiz Yayın</h2>
+      <p>
+        Kitap PDF ve EPUB olarak ücretsiz okunabilir ve paylaşım koşullarına uyularak ücretsiz paylaşılabilir.
+        Eserin satılması, değiştirilmesi veya başka bir isimle yayımlanması yasaktır.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Ahmet Serhat Uğurlu ·
+      <a href="https://x.com/ASerhatUgurlu">X</a> · Teknoloji & Hayat
+    </footer>
+  </div>
+
+  <script>
+    const api = "https://api.github.com/repos/aserhat81/Zamanin-Dokumacilari/releases";
+
+    async function loadCounts() {
+      const status = document.getElementById("counterStatus");
+      try {
+        const response = await fetch(api, {
+          headers: { "Accept": "application/vnd.github+json" }
+        });
+        if (!response.ok) throw new Error("GitHub API: " + response.status);
+
+        const releases = await response.json();
+        let total = 0, pdf = 0, epub = 0;
+
+        for (const release of releases) {
+          for (const asset of (release.assets || [])) {
+            const count = Number(asset.download_count || 0);
+            const name = String(asset.name || "").toLowerCase();
+            total += count;
+            if (name.endsWith(".pdf")) pdf += count;
+            if (name.endsWith(".epub")) epub += count;
+          }
+        }
+
+        document.getElementById("total").textContent = total.toLocaleString("tr-TR");
+        document.getElementById("pdf").textContent = pdf.toLocaleString("tr-TR");
+        document.getElementById("epub").textContent = epub.toLocaleString("tr-TR");
+        status.textContent = "GitHub Release dosyalarının toplam indirme sayısı.";
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Sayaç şu anda alınamadı; indirme bağlantıları çalışmaya devam eder.";
+      }
+    }
+    loadCounts();
+  </script>
+</body>
+</html>

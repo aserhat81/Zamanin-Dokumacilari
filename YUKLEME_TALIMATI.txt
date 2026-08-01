@@ -1,0 +1,30 @@
+ZAMANIN DOKUMACILARI — GITHUB YÜKLEME ÖZETİ
+
+1) GitHub'da Public repo oluştur:
+   Owner: aserhat81
+   Name: Zamanin-Dokumacilari
+
+2) Bu klasördeki şu dosyaları reponun köküne yükle:
+   README.md
+   LICENSE.md
+   index.html
+   .nojekyll
+   assets klasörü
+
+3) Release oluştur:
+   Tag: v1.0.0
+   Başlık: Zamanın Dokumacıları — v1.0
+   Asset olarak ayrı verilen şu dosyaları yükle:
+   Zamanin_Dokumacilari.pdf
+   Zamanin_Dokumacilari.epub
+
+4) GitHub Pages:
+   Settings > Pages > Deploy from a branch
+   Branch: main
+   Folder: /(root)
+
+Site adresi:
+https://aserhat81.github.io/Zamanin-Dokumacilari/
+
+API sayaç kontrolü:
+https://api.github.com/repos/aserhat81/Zamanin-Dokumacilari/releases/latest
