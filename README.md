@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.png" width="520" alt="Zamanın Dokumacıları">
+<img src="assets/logo.svg" width="680" alt="Zamanın Dokumacıları">
 
 <br>
 
@@ -12,9 +12,9 @@
 
 **Geçmiş sizi duyabilseydi, ona ne söylerdiniz?**
 
-[📕 PDF İndir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.pdf)
+[📕 PDF İndir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.pdf)
 &nbsp;&nbsp;
-[📘 EPUB İndir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.epub)
+[📘 EPUB İndir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.epub)
 
 </div>
 
@@ -34,8 +34,8 @@ Bilge, Aybike, Göktuğ, Alp ve zamanın yankılarını hissedebilen Umay; geçm
 
 ## Ücretsiz Oku
 
-- [PDF sürümünü indir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.pdf)
-- [Apple Books ve diğer e-kitap okuyucuları için EPUB sürümünü indir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/latest/download/Zamanin_Dokumacilari.epub)
+- [PDF sürümünü indir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.pdf)
+- [Apple Books ve diğer e-kitap okuyucuları için EPUB sürümünü indir](https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.epub)
 
 ---
 
@@ -44,18 +44,3 @@ Bilge, Aybike, Göktuğ, Alp ve zamanın yankılarını hissedebilen Umay; geçm
 © 2026 Ahmet Serhat Uğurlu. Tüm hakları saklıdır.
 
 Bu eser ücretsiz olarak yayımlanmıştır. Dosya; değiştirilmemek, yazar adı kaldırılmamak, başka bir isimle yayımlanmamak, satılmamak ve ticari amaçla kullanılmamak şartıyla ücretsiz olarak paylaşılabilir.
-
-Eserin değiştirilmesi, çevrilmesi, seslendirilmesi, uyarlanması veya türev eser oluşturulması yazarın yazılı iznine tabidir.
-
----
-
-## Yazar
-
-**Ahmet Serhat Uğurlu**
-
-- YouTube: Teknoloji & Hayat
-- X: https://x.com/ASerhatUgurlu
-
-## Sürüm
-
-İlk kamuya açık sürüm: **v1.0.0 — 2026**
