@@ -1,33 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" role="img" aria-labelledby="title desc">
   <title id="title">Zamanın Dokumacıları</title>
-  <desc id="desc">Üç iç içe altın halka ve kitap adı</desc>
+  <desc id="desc">Üç iç içe altın halka ve okunaklı kitap adı</desc>
   <defs>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff0a6"/>
-      <stop offset="0.45" stop-color="#e8bd55"/>
-      <stop offset="1" stop-color="#b77a18"/>
+      <stop offset="0" stop-color="#fff4b8"/>
+      <stop offset="0.48" stop-color="#e8bd55"/>
+      <stop offset="1" stop-color="#b87918"/>
     </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <g transform="translate(35 22)" fill="none" stroke="url(#gold)" stroke-width="13" filter="url(#glow)">
-    <circle cx="150" cy="105" r="78"/>
-    <circle cx="105" cy="180" r="78"/>
-    <circle cx="195" cy="180" r="78"/>
+  <g transform="translate(38 18)" fill="none" stroke="url(#gold)" stroke-width="13"
+     stroke-linecap="round" filter="url(#softGlow)">
+    <circle cx="150" cy="92" r="72"/>
+    <circle cx="108" cy="164" r="72"/>
+    <circle cx="192" cy="164" r="72"/>
   </g>
 
-  <g transform="translate(42 252)" stroke="url(#gold)" stroke-width="5" fill="none" stroke-linecap="round">
-    <path d="M25 0 C90 -18 210 -18 275 0"/>
-    <path d="M25 18 C90 0 210 0 275 18"/>
-    <path d="M25 36 C90 18 210 18 275 36"/>
+  <g transform="translate(65 245)" stroke="url(#gold)" stroke-width="5"
+     fill="none" stroke-linecap="round">
+    <path d="M15 0 C75 -15 185 -15 245 0"/>
+    <path d="M15 17 C75 2 185 2 245 17"/>
   </g>
 
-  <g font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="8"
-     fill="url(#gold)" stroke="#071426" stroke-width="2" paint-order="stroke fill">
-    <text x="355" y="145" font-size="92">ZAMANIN</text>
-    <text x="355" y="255" font-size="92">DOKUMACILARI</text>
-  </g>
+  <text x="335" y="180"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="94"
+        font-weight="700"
+        letter-spacing="4"
+        fill="url(#gold)"
+        stroke="#071426"
+        stroke-width="2"
+        paint-order="stroke fill">ZAMANIN DOKUMACILARI</text>
+
+  <path d="M338 216 H1518" stroke="#e8bd55" stroke-width="3" opacity=".7"/>
 </svg>
