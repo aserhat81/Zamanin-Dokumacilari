@@ -71,3 +71,11 @@ The novel is published free of charge in Turkish and English as PDF and EPUB.
 Dosyalar; değiştirilmemek, yazar adı kaldırılmamak, başka bir isimle yayımlanmamak, satılmamak ve ticari amaçla kullanılmamak şartıyla ücretsiz olarak paylaşılabilir.
 
 The files may be shared free of charge only if they remain unaltered, retain the author's name, are not republished under another title, and are not sold or used commercially.
+
+---
+
+## İletişim / Contact
+
+Kitapla ilgili görüş, öneri ve iletişim için / For feedback, suggestions, and contact:
+
+**E-posta / Email:** [aserhat@gmail.com](mailto:aserhat@gmail.com)
