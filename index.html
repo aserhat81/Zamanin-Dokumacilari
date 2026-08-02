@@ -5,138 +5,549 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Zamanın Dokumacıları / The Weavers of Time — Ahmet Serhat Uğurlu tarafından yazılmış ücretsiz bilimkurgu romanı. PDF ve EPUB olarak indir.">
   <title>Zamanın Dokumacıları / The Weavers of Time — Ücretsiz Bilimkurgu Romanı</title>
+
   <style>
-    :root{--bg:#050914;--text:#f4f2ec;--muted:#aeb8cc;--gold:#e6bd62;--gold2:#fff0b2;--line:#23304a;--panel:#ffffff08}
+    :root{
+      --bg:#050914;
+      --bg2:#101d38;
+      --text:#f4f2ec;
+      --muted:#aeb8cc;
+      --gold:#e6bd62;
+      --gold2:#fff0b2;
+      --line:#23304a;
+      --panel:#ffffff08;
+    }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 50% 0,#142342 0,#050914 46%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.65}
-    a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
-    header{padding:40px 0 18px;text-align:center}.logo{width:min(980px,100%);height:auto;display:block;margin:0 auto}
-    .lang-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 18px}
-    .lang-nav a{text-decoration:none;border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:999px;color:var(--gold2);font-weight:700}
-    .hero,.edition-grid{display:grid;grid-template-columns:minmax(250px,380px) 1fr;gap:52px;align-items:center;padding:28px 0 70px}
-    .cover{width:100%;border-radius:14px;box-shadow:0 28px 80px #000b;border:1px solid #ffffff20}
-    h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,78px);line-height:1.03;margin:0 0 18px;color:var(--gold2)}
+
+    body{
+      margin:0;
+      background:radial-gradient(circle at 50% 0,var(--bg2) 0,var(--bg) 48%);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      line-height:1.65;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(1140px,92%);margin:auto}
+
+    /* LOGO: Yazı SVG içinde değil, HTML metni olarak gösterilir.
+       Böylece hiçbir ekran genişliğinde kesilmez. */
+    header{
+      padding:28px 0 20px;
+      text-align:center;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:22px;
+      max-width:1040px;
+      margin:0 auto 18px;
+    }
+
+    .brand-mark{
+      width:clamp(105px,14vw,180px);
+      flex:0 0 auto;
+      filter:drop-shadow(0 0 9px #e6bd6266);
+    }
+
+    .brand-name{
+      min-width:0;
+      text-align:left;
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:700;
+      line-height:.94;
+      letter-spacing:.035em;
+      color:var(--gold2);
+      text-shadow:0 2px 16px #000;
+    }
+
+    .brand-name .line-one{
+      display:block;
+      font-size:clamp(34px,5.4vw,72px);
+      white-space:nowrap;
+    }
+
+    .brand-name .line-two{
+      display:block;
+      font-size:clamp(34px,5.4vw,72px);
+      white-space:nowrap;
+    }
+
+    .brand-rule{
+      display:block;
+      height:2px;
+      margin-top:14px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+    }
+
+    .quick-contact{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:4px 0 14px;
+    }
+
+    .quick-contact a{
+      text-decoration:none;
+      border:1px solid #e6bd6250;
+      background:#e6bd6210;
+      color:var(--gold2);
+      padding:8px 13px;
+      border-radius:999px;
+      font-weight:750;
+    }
+
+    .quick-contact a:hover,
+    .lang-nav a:hover,
+    .edition-contact a:hover{
+      border-color:var(--gold);
+      background:#e6bd6220;
+    }
+
+    .lang-nav{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:0 0 18px;
+    }
+
+    .lang-nav a{
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:var(--panel);
+      padding:8px 14px;
+      border-radius:999px;
+      color:var(--gold2);
+      font-weight:700;
+    }
+
+    .hero,.edition-grid{
+      display:grid;
+      grid-template-columns:minmax(250px,380px) 1fr;
+      gap:52px;
+      align-items:center;
+      padding:28px 0 70px;
+    }
+
+    .cover{
+      width:100%;
+      border-radius:14px;
+      box-shadow:0 28px 80px #000b;
+      border:1px solid #ffffff20;
+    }
+
+    h1{
+      font-family:Georgia,serif;
+      font-size:clamp(40px,6vw,78px);
+      line-height:1.03;
+      margin:0 0 18px;
+      color:var(--gold2);
+    }
+
     .english-title{font-size:clamp(38px,5vw,64px)}
-    .lead{font-size:clamp(19px,2.2vw,27px);color:#fff;margin:0 0 18px}
-    .summary{color:var(--muted);font-size:17px}.buttons{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 22px}
-    .btn{display:inline-block;text-decoration:none;padding:14px 20px;border-radius:10px;font-weight:800;border:1px solid var(--gold)}
-    .primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#171005}.secondary{background:#ffffff0a;color:var(--gold2)}
-    .stats{display:flex;gap:14px;flex-wrap:wrap}.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;min-width:145px}
-    .stat strong{display:block;color:var(--gold2);font-size:24px}
-    section{padding:55px 0;border-top:1px solid var(--line)}
-    h2{font-family:Georgia,serif;color:var(--gold2);font-size:34px;margin:0 0 18px}
-    blockquote{margin:28px 0;padding:20px 24px;border-left:4px solid var(--gold);background:var(--panel);font-family:Georgia,serif;font-size:22px}
-    .edition-label{display:inline-block;margin-bottom:14px;padding:6px 12px;border-radius:999px;background:#e6bd6220;border:1px solid #e6bd6260;color:var(--gold2);font-weight:800;letter-spacing:.04em}
-    footer{padding:34px 0 55px;border-top:1px solid var(--line);color:var(--muted);text-align:center}
+
+    .lead{
+      font-size:clamp(19px,2.2vw,27px);
+      color:#fff;
+      margin:0 0 18px;
+    }
+
+    .summary{color:var(--muted);font-size:17px}
+
+    /* Her dil bölümünde ayrı iletişim alanı */
+    .edition-contact{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 16px;
+      align-items:center;
+      margin:18px 0 0;
+      padding:12px 14px;
+      border:1px solid #e6bd6240;
+      border-radius:12px;
+      background:#e6bd620b;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .edition-contact strong{color:var(--gold2)}
+    .edition-contact a{
+      color:var(--gold2);
+      text-decoration:none;
+      font-weight:750;
+      border-bottom:1px dotted #e6bd6280;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:22px 0;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 20px;
+      border-radius:10px;
+      font-weight:800;
+      border:1px solid var(--gold);
+    }
+
+    .primary{
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#171005;
+    }
+
+    .secondary{
+      background:#ffffff0a;
+      color:var(--gold2);
+    }
+
+    .stats{display:flex;gap:14px;flex-wrap:wrap}
+
+    .stat{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:13px 17px;
+      min-width:145px;
+    }
+
+    .stat strong{
+      display:block;
+      color:var(--gold2);
+      font-size:24px;
+    }
+
+    section{
+      padding:55px 0;
+      border-top:1px solid var(--line);
+    }
+
+    h2{
+      font-family:Georgia,serif;
+      color:var(--gold2);
+      font-size:34px;
+      margin:0 0 18px;
+    }
+
+    blockquote{
+      margin:28px 0;
+      padding:20px 24px;
+      border-left:4px solid var(--gold);
+      background:var(--panel);
+      font-family:Georgia,serif;
+      font-size:22px;
+    }
+
+    .edition-label{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#e6bd6220;
+      border:1px solid #e6bd6260;
+      color:var(--gold2);
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+
+    footer{
+      padding:34px 0 55px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+    }
+
+    footer a{color:var(--gold2);text-decoration:none}
     .error{font-size:13px;color:var(--muted);margin-top:8px}
-    @media(max-width:760px){.hero,.edition-grid{grid-template-columns:1fr;gap:30px}.cover{max-width:360px;margin:auto}.heroText,.editionText{text-align:center}.buttons,.stats{justify-content:center}}
+
+    @media(max-width:760px){
+      header{padding-top:20px}
+      .brand{gap:12px;align-items:center}
+      .brand-mark{width:92px}
+      .brand-name .line-one,
+      .brand-name .line-two{
+        font-size:clamp(25px,8vw,42px);
+        letter-spacing:.015em;
+      }
+      .brand-rule{margin-top:9px}
+      .hero,.edition-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+      .cover{max-width:360px;margin:auto}
+      .heroText,.editionText{text-align:center}
+      .buttons,.stats,.edition-contact{justify-content:center}
+    }
+
+    @media(max-width:430px){
+      .brand{gap:8px}
+      .brand-mark{width:72px}
+      .brand-name .line-one,
+      .brand-name .line-two{
+        font-size:clamp(22px,7.6vw,32px);
+      }
+      .quick-contact{display:grid}
+      .quick-contact a{display:block}
+    }
   </style>
 </head>
+
 <body>
 <div class="wrap">
-<header>
-  <img class="logo" src="assets/logo.svg" alt="Zamanın Dokumacıları">
-  <nav class="lang-nav" aria-label="Dil seçimi">
-    <a href="#turkce">Türkçe</a>
-    <a href="#english">English</a>
-  </nav>
-</header>
 
-<main id="turkce" class="hero">
-  <img class="cover" src="assets/kapak.jpg" alt="Zamanın Dokumacıları kitap kapağı">
-  <div class="heroText">
-    <span class="edition-label">TÜRKÇE SÜRÜM</span>
-    <h1>Zamanın Dokumacıları</h1>
-    <p class="lead">Geçmiş sizi duyabilseydi, ona ne söylerdiniz?</p>
-    <p class="summary">3025 yılında başlayan; kader, özgür irade, yapay zekâ ve zamanın doğası üzerine kurulu felsefi bir bilimkurgu romanı.</p>
-    <div class="buttons">
-      <a class="btn primary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.pdf">PDF İndir</a>
-      <a class="btn secondary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.epub">EPUB / Apple Books</a>
+  <header>
+    <div class="brand" aria-label="Zamanın Dokumacıları">
+      <svg class="brand-mark" viewBox="0 0 300 270" role="img" aria-label="Üç iç içe altın halka">
+        <defs>
+          <linearGradient id="brandGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff4b8"/>
+            <stop offset=".48" stop-color="#e8bd55"/>
+            <stop offset="1" stop-color="#b87918"/>
+          </linearGradient>
+          <filter id="brandGlow" x="-35%" y="-35%" width="170%" height="170%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <g fill="none" stroke="url(#brandGold)" stroke-width="13"
+           stroke-linecap="round" filter="url(#brandGlow)">
+          <circle cx="150" cy="82" r="68"/>
+          <circle cx="108" cy="154" r="68"/>
+          <circle cx="192" cy="154" r="68"/>
+        </g>
+
+        <g stroke="url(#brandGold)" stroke-width="5"
+           fill="none" stroke-linecap="round">
+          <path d="M42 232 C95 215 205 215 258 232"/>
+          <path d="M42 250 C95 233 205 233 258 250"/>
+        </g>
+      </svg>
+
+      <div class="brand-name">
+        <span class="line-one">ZAMANIN</span>
+        <span class="line-two">DOKUMACILARI</span>
+        <span class="brand-rule"></span>
+      </div>
     </div>
-    <div class="stats">
-      <div class="stat"><strong id="total">—</strong>Toplam indirme</div>
-      <div class="stat"><strong id="trPdf">—</strong>Türkçe PDF</div>
-      <div class="stat"><strong id="trEpub">—</strong>Türkçe EPUB</div>
+
+    <!-- Sayfa açılır açılmaz görünen iletişim ve kanal bağlantıları -->
+    <div class="quick-contact">
+      <a href="mailto:aserhat@gmail.com">✉ aserhat@gmail.com</a>
+      <a href="https://www.youtube.com/c/TeknolojiHayat"
+         target="_blank" rel="noopener noreferrer">▶ Teknoloji &amp; Hayat YouTube</a>
     </div>
-    <div class="error" id="counterStatus">Sayaç GitHub Releases verilerinden alınır.</div>
-  </div>
-</main>
 
-<section>
-  <h2>Kitap Hakkında</h2>
-  <p>Bilge, Aybike, Göktuğ, Alp ve zamanın yankılarını hissedebilen Umay; geçmişe dokunmanın geleceği kurtarıp kurtaramayacağını anlamaya çalışır.</p>
-  <blockquote>Son sayfaya geldiğinizde ilk bölümü yeniden okumak isteyebilirsiniz.</blockquote>
-</section>
+    <nav class="lang-nav" aria-label="Dil seçimi">
+      <a href="#turkce">Türkçe</a>
+      <a href="#english">English</a>
+    </nav>
+  </header>
 
-<section id="english">
-  <div class="edition-grid">
-    <img class="cover" src="assets/the-weavers-of-time-cover.jpg" alt="The Weavers of Time book cover">
-    <div class="editionText">
-      <span class="edition-label">ENGLISH EDITION</span>
-      <h1 class="english-title">The Weavers of Time</h1>
-      <p class="lead">If the past could hear you, what would you say?</p>
-      <p class="summary">A philosophical science-fiction novel set in 3025, exploring destiny, free will, artificial intelligence, history, and the nature of time.</p>
+  <main id="turkce" class="hero">
+    <img class="cover" src="assets/kapak.jpg" alt="Zamanın Dokumacıları kitap kapağı">
+
+    <div class="heroText">
+      <span class="edition-label">TÜRKÇE SÜRÜM</span>
+      <h1>Zamanın Dokumacıları</h1>
+      <p class="lead">Geçmiş sizi duyabilseydi, ona ne söylerdiniz?</p>
+      <p class="summary">
+        3025 yılında başlayan; kader, özgür irade, yapay zekâ ve zamanın
+        doğası üzerine kurulu felsefi bir bilimkurgu romanı.
+      </p>
+
+      <div class="edition-contact">
+        <strong>İletişim:</strong>
+        <a href="mailto:aserhat@gmail.com">aserhat@gmail.com</a>
+        <strong>YouTube:</strong>
+        <a href="https://www.youtube.com/c/TeknolojiHayat"
+           target="_blank" rel="noopener noreferrer">Teknoloji &amp; Hayat</a>
+      </div>
+
       <div class="buttons">
-        <a class="btn primary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/The_Weavers_of_Time.pdf">Download PDF</a>
-        <a class="btn secondary" href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/The_Weavers_of_Time.epub">EPUB / Apple Books</a>
+        <a class="btn primary"
+           href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.pdf">
+          PDF İndir
+        </a>
+
+        <a class="btn secondary"
+           href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/Zamanin_Dokumacilari.epub">
+          EPUB / Apple Books
+        </a>
       </div>
+
       <div class="stats">
-        <div class="stat"><strong id="enPdf">—</strong>English PDF</div>
-        <div class="stat"><strong id="enEpub">—</strong>English EPUB</div>
+        <div class="stat"><strong id="total">—</strong>Toplam indirme</div>
+        <div class="stat"><strong id="trPdf">—</strong>Türkçe PDF</div>
+        <div class="stat"><strong id="trEpub">—</strong>Türkçe EPUB</div>
       </div>
-      <div class="error">Download counts are read directly from GitHub Releases.</div>
+
+      <div class="error" id="counterStatus">
+        Sayaç GitHub Releases verilerinden alınır.
+      </div>
     </div>
-  </div>
-</section>
+  </main>
 
-<section>
-  <h2>Ücretsiz Yayın / Free Edition</h2>
-  <p>Kitap Türkçe ve İngilizce olarak PDF ve EPUB biçimlerinde ücretsiz okunabilir. Eserin satılması, değiştirilmesi veya başka bir isimle yayımlanması yasaktır.</p>
-  <p>The novel is available free of charge in Turkish and English as PDF and EPUB. It may not be sold, altered, or republished under another name.</p>
-</section>
+  <section>
+    <h2>Kitap Hakkında</h2>
+    <p>
+      Bilge, Aybike, Göktuğ, Alp ve zamanın yankılarını hissedebilen Umay;
+      geçmişe dokunmanın geleceği kurtarıp kurtaramayacağını anlamaya çalışır.
+    </p>
+    <blockquote>
+      Son sayfaya geldiğinizde ilk bölümü yeniden okumak isteyebilirsiniz.
+    </blockquote>
+  </section>
 
+  <section id="english">
+    <div class="edition-grid">
+      <img class="cover"
+           src="assets/the-weavers-of-time-cover.jpg"
+           alt="The Weavers of Time book cover">
 
-<section id="contact">
-  <h2>İletişim / Contact</h2>
-  <p>Kitapla ilgili görüş, öneri ve iletişim için / For feedback, suggestions, and contact:</p>
-  <p><a href="mailto:aserhat@gmail.com"><strong>aserhat@gmail.com</strong></a></p>
-</section>
+      <div class="editionText">
+        <span class="edition-label">ENGLISH EDITION</span>
+        <h1 class="english-title">The Weavers of Time</h1>
+        <p class="lead">If the past could hear you, what would you say?</p>
+        <p class="summary">
+          A philosophical science-fiction novel set in 3025, exploring destiny,
+          free will, artificial intelligence, history, and the nature of time.
+        </p>
 
-<footer>© 2026 Ahmet Serhat Uğurlu · <a href="mailto:aserhat@gmail.com">aserhat@gmail.com</a> · <a href="https://x.com/ASerhatUgurlu">X</a> · Teknoloji &amp; Hayat</footer>
+        <div class="edition-contact">
+          <strong>Contact:</strong>
+          <a href="mailto:aserhat@gmail.com">aserhat@gmail.com</a>
+          <strong>YouTube:</strong>
+          <a href="https://www.youtube.com/c/TeknolojiHayat"
+             target="_blank" rel="noopener noreferrer">Teknoloji &amp; Hayat</a>
+        </div>
+
+        <div class="buttons">
+          <a class="btn primary"
+             href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/The_Weavers_of_Time.pdf">
+            Download PDF
+          </a>
+
+          <a class="btn secondary"
+             href="https://github.com/aserhat81/Zamanin-Dokumacilari/releases/download/v1.0.0/The_Weavers_of_Time.epub">
+            EPUB / Apple Books
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong id="enPdf">—</strong>English PDF</div>
+          <div class="stat"><strong id="enEpub">—</strong>English EPUB</div>
+        </div>
+
+        <div class="error">
+          Download counts are read directly from GitHub Releases.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ücretsiz Yayın / Free Edition</h2>
+    <p>
+      Kitap Türkçe ve İngilizce olarak PDF ve EPUB biçimlerinde ücretsiz
+      okunabilir. Eserin satılması, değiştirilmesi veya başka bir isimle
+      yayımlanması yasaktır.
+    </p>
+    <p>
+      The novel is available free of charge in Turkish and English as PDF and
+      EPUB. It may not be sold, altered, or republished under another name.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Ahmet Serhat Uğurlu ·
+    <a href="mailto:aserhat@gmail.com">aserhat@gmail.com</a> ·
+    <a href="https://www.youtube.com/c/TeknolojiHayat"
+       target="_blank" rel="noopener noreferrer">Teknoloji &amp; Hayat YouTube</a> ·
+    <a href="https://x.com/ASerhatUgurlu"
+       target="_blank" rel="noopener noreferrer">X</a>
+  </footer>
 </div>
 
 <script>
 const api = "https://api.github.com/repos/aserhat81/Zamanin-Dokumacilari/releases";
+
 async function loadCounts(){
-  const status=document.getElementById("counterStatus");
+  const status = document.getElementById("counterStatus");
+
   try{
-    const r=await fetch(api,{headers:{"Accept":"application/vnd.github+json"}});
-    if(!r.ok) throw new Error("GitHub API: "+r.status);
-    const releases=await r.json();
-    let total=0,trPdf=0,trEpub=0,enPdf=0,enEpub=0;
-    for(const rel of releases){
-      for(const a of (rel.assets||[])){
-        const c=Number(a.download_count||0);
-        const n=String(a.name||"").toLowerCase();
-        total+=c;
-        if(n==="zamanin_dokumacilari.pdf") trPdf+=c;
-        else if(n==="zamanin_dokumacilari.epub") trEpub+=c;
-        else if(n==="the_weavers_of_time.pdf") enPdf+=c;
-        else if(n==="the_weavers_of_time.epub") enEpub+=c;
+    const response = await fetch(api,{
+      headers:{"Accept":"application/vnd.github+json"}
+    });
+
+    if(!response.ok){
+      throw new Error("GitHub API: " + response.status);
+    }
+
+    const releases = await response.json();
+
+    let total = 0;
+    let trPdf = 0;
+    let trEpub = 0;
+    let enPdf = 0;
+    let enEpub = 0;
+
+    for(const release of releases){
+      for(const asset of (release.assets || [])){
+        const count = Number(asset.download_count || 0);
+        const name = String(asset.name || "").toLowerCase();
+
+        total += count;
+
+        if(name === "zamanin_dokumacilari.pdf"){
+          trPdf += count;
+        }else if(name === "zamanin_dokumacilari.epub"){
+          trEpub += count;
+        }else if(name === "the_weavers_of_time.pdf"){
+          enPdf += count;
+        }else if(name === "the_weavers_of_time.epub"){
+          enEpub += count;
+        }
       }
     }
-    document.getElementById("total").textContent=total.toLocaleString("tr-TR");
-    document.getElementById("trPdf").textContent=trPdf.toLocaleString("tr-TR");
-    document.getElementById("trEpub").textContent=trEpub.toLocaleString("tr-TR");
-    document.getElementById("enPdf").textContent=enPdf.toLocaleString("en-US");
-    document.getElementById("enEpub").textContent=enEpub.toLocaleString("en-US");
-    status.textContent="Tüm sayaçlar GitHub Release dosyalarının gerçek indirme sayılarını gösterir.";
-  }catch(e){
-    console.error(e);
-    status.textContent="Sayaç şu anda alınamadı; indirme bağlantıları çalışmaya devam eder.";
+
+    document.getElementById("total").textContent =
+      total.toLocaleString("tr-TR");
+
+    document.getElementById("trPdf").textContent =
+      trPdf.toLocaleString("tr-TR");
+
+    document.getElementById("trEpub").textContent =
+      trEpub.toLocaleString("tr-TR");
+
+    document.getElementById("enPdf").textContent =
+      enPdf.toLocaleString("en-US");
+
+    document.getElementById("enEpub").textContent =
+      enEpub.toLocaleString("en-US");
+
+    status.textContent =
+      "Tüm sayaçlar GitHub Release dosyalarının gerçek indirme sayılarını gösterir.";
+
+  }catch(error){
+    console.error(error);
+    status.textContent =
+      "Sayaç şu anda alınamadı; indirme bağlantıları çalışmaya devam eder.";
   }
 }
+
 loadCounts();
 </script>
 </body>
